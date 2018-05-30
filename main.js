@@ -11,7 +11,7 @@ function buyB(){
     var BCost = Math.floor(10 * Math.pow(1.1,A));     
     if(A >= BCost){                                   
         B = B + 1;                                   
-    	kills = kills - swordCost;                          
+    	A = A - BCost;                          
         document.getElementById('A').innerHTML = A;  
         document.getElementById('B').innerHTML = B;  
     };
@@ -33,7 +33,7 @@ function buyC(){
         document.getElementById('C').innerHTML = C;  
     };
     var nextCost = Math.floor(100 * Math.pow(1.1,B));       
-    document.getElementById('magicCost').innerHTML = nextCost;  
+    document.getElementById('CCost').innerHTML = nextCost;  
 function c(number){
  C = C + number;
  document.getElementById("C").innerHTML = C;
