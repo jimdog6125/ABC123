@@ -1,5 +1,6 @@
 var A = 0;
-
+var Life = 1;
+var speed = 1000;
 function a(number){
     A = A + number;
     document.getElementById("A").innerHTML = A;
@@ -126,21 +127,21 @@ window.setInterval(function(){
 	
 	a(ones);
 	
-}, 1000);
+}, speed);
 window.setInterval(function(){
 	
 	b(twos);
 
-}, 1000);
+}, speed);
 window.setInterval(function(){
 	
 	c(threes);
 
-}, 1000);
+}, speed);
 window.setInterval(function(){
 	
 	d(fours);
 
-}, 1000);
+}, speed);
 
 
