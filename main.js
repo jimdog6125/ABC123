@@ -1,6 +1,7 @@
 var A = 0;
 var Life = 1;
 var speed = 1000;
+
 function a(number){
     A = A + number;
     document.getElementById("A").innerHTML = A;
@@ -22,7 +23,7 @@ function buyB(){
 function b(number){
  B = B + number;
  document.getElementById("B").innerHTML = B;
-}
+};
 
 var C = 0;
 
@@ -128,16 +129,19 @@ window.setInterval(function(){
 	a(ones);
 	
 }, speed);
+
 window.setInterval(function(){
 	
 	b(twos);
 
 }, speed);
+
 window.setInterval(function(){
 	
 	c(threes);
 
 }, speed);
+
 window.setInterval(function(){
 	
 	d(fours);
