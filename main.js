@@ -2,14 +2,14 @@ var A = 0;
 var Life = 1;
 var speed = 1000;
 
-function a(number){
+var a = function(number){
     A = A + number;
     document.getElementById("A").innerHTML = A;
 };
 
 var B = 0;
 
-function buyB(){
+var buyB = function(){
     var BCost = Math.floor(10 * Math.pow(1.1,A));     
     if(A >= BCost){                                   
         B = B + 1;                                   
@@ -20,14 +20,14 @@ function buyB(){
     var nextCost = Math.floor(10 * Math.pow(1.1,A));      
     document.getElementById('BCost').innerHTML = nextCost ;  
 };
-function b(number){
+var b = function(number){
  B = B + number;
  document.getElementById("B").innerHTML = B;
 };
 
 var C = 0;
 
-function buyC(){
+var buyC = function(){
     var CCost = Math.floor(10 * Math.pow(1.1,B));     
     if(B >= CCost){                                   
         C = C + 1;                                  
@@ -36,14 +36,14 @@ function buyC(){
     };
     var nextCost = Math.floor(100 * Math.pow(1.1,B));       
     document.getElementById('CCost').innerHTML = nextCost;  
-function c(number){
+var c = function(number){
  C = C + number;
  document.getElementById("C").innerHTML = C;
 }
 
 var D = 0;
 
-function buyD(){
+var buyD = function(){
     var DCost = Math.floor(10 * Math.pow(1.1,));     
     if(C >= DCost){                                   
         D = D + 1;                                   
@@ -54,14 +54,14 @@ function buyD(){
     var nextCost = Math.floor(500 * Math.pow(1.1,C));       
     document.getElementById('DCost').innerHTML = nextCost;  
 
-function d(number){
+var d = function(number){
  D = D + number;
  document.getElementById("D").innerHTML = D;
 }
 
 var E = 0;
 
-function buyE(){
+var buyE = function(){
     var ECost = Math.floor(5000 * Math.pow(1.1,D));     
     if(D >= ECost){                                   
         E = E + 1;                                  
@@ -75,7 +75,7 @@ function buyE(){
 
 
 ones = 0;
-function buyOne(){
+var buyOne = function(){
     var oneCost = Math.floor(10 * Math.pow(1.1,B));     
     if(B >= oneCost){                                   
         ones = ones + 1;                                   
@@ -88,7 +88,7 @@ function buyOne(){
 };
 
 twos = 0;
-function buyTwo(){
+var buyTwo = function(){
     var twoCost = Math.floor(10 * Math.pow(1.1,C));     
     if(C >= twoCost){                                   
         twos = twos + 1;                                 
@@ -100,7 +100,7 @@ function buyTwo(){
     document.getElementById('twoCost').innerHTML = nextCost;  
 
 threes = 0;
-function buyThree(){
+var buyThree = function(){
     var threeCost = Math.floor(10 * Math.pow(1.1,D));     
     if(D >= threeCost){                                   
         threes = threes + 1;                                   
@@ -112,7 +112,7 @@ function buyThree(){
     document.getElementById('threeCost').innerHTML = nextCost;  
 
 fours = 0;
-function buyFour(){
+var buyFour = function(){
     var fourCost = Math.floor(10 * Math.pow(1.1,E));     
     if(E >= fourCost){                                  
         fours = fours + 1;                                   
