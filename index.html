@@ -10,13 +10,13 @@
 		</div>
 		<p>WARNING: Not meant for mobile devices</p>
 		
-		<div class="button" onclick="a(1)">A</div>
+		<div id="a" class="button" onclick="a(1)">A</div>
 		<br />
 		
 		<div>
-		A: <span id="B">0</span>
+		A: <span id="A">0</span>
 		<br />
-		<button class="button" onclick="buyB()">B</button>
+		<button id="b" class="button" onclick="buyB()">B</button>
 		<br />
 		B: <span id="B">0</span>
 		<br />
@@ -24,7 +24,7 @@
 		</div>
 						 
 		<div>
-		<button class="button" onclick="buyC()">C</button>
+		<button id="c" class="button" onclick="buyC()">C</button>
 		<br />
 		C: <span id="C">0</span>
 		<br />
@@ -32,7 +32,7 @@
 		</div>
 		
 		<div>
-		<button class="button" onclick="buyD()">D</button>
+		<button id="d" class="button" onclick="buyD()">D</button>
 		<br />
 		D: <span id="D">0</span>
 		<br />
@@ -168,6 +168,9 @@ var buyFour = function(){
     var nextCost = Math.floor(10 * Math.pow(1.1,E));       
     document.getElementById('fourCost').innerHTML = nextCost;  
 };
+document.getElementById("a").addEventListener("click", function(){
+    document.getElementById("A").innerHTML = A + 1;
+});
 
 window.setInterval(function(){
 	
