@@ -10,7 +10,7 @@
 		</div>
 		<p>WARNING: Not meant for mobile devices</p>
 		
-		<div id="a" class="button" onclick="a(1)">A</div>
+		<div id="a" class="button" onclick="get_a(1)">A</div>
 		<br />
 		
 		<div>
@@ -47,7 +47,7 @@
 var Life = 1;
 var speed = 1000;
 
-var a = function(number){
+var get_a = function(number){
     A = A + number;
     document.getElementById("A").innerHTML = A;
 };
@@ -65,7 +65,7 @@ var buyB = function(){
     var nextCost = Math.floor(10 * Math.pow(1.1,A));      
     document.getElementById('BCost').innerHTML = nextCost ;  
 };
-var b = function(number){
+var get_b = function(number){
  B = B + number;
  document.getElementById("B").innerHTML = B;
 };
@@ -81,7 +81,7 @@ var buyC = function(){
     };
     var nextCost = Math.floor(100 * Math.pow(1.1,B));       
     document.getElementById('CCost').innerHTML = nextCost;  
-var c = function(number){
+var get_c = function(number){
  C = C + number;
  document.getElementById("C").innerHTML = C;
 }
@@ -99,7 +99,7 @@ var buyD = function(){
     var nextCost = Math.floor(500 * Math.pow(1.1,C));       
     document.getElementById('DCost').innerHTML = nextCost;  
 
-var d = function(number){
+var get_d = function(number){
  D = D + number;
  document.getElementById("D").innerHTML = D;
 }
@@ -174,25 +174,25 @@ document.getElementById("a").addEventListener("click", function(){
 
 window.setInterval(function(){
 	
-	a(ones);
+	get_a(ones);
 	
 }, speed);
 
 window.setInterval(function(){
 	
-	b(twos);
+	get_b(twos);
 
 }, speed);
 
 window.setInterval(function(){
 	
-	c(threes);
+	get_c(threes);
 
 }, speed);
 
 window.setInterval(function(){
 	
-	d(fours);
+	get_d(fours);
 
 }, speed);
 
