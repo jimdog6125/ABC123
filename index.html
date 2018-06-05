@@ -53,9 +53,9 @@ var get_a = function(number){
 };
 
 var B = 0;
-
+var BCost = Math.floor(10 * Math.pow(1.1,A));  
 var buyB = function(){
-    var BCost = Math.floor(10 * Math.pow(1.1,A));     
+      
     if(A >= BCost){                                   
         B = B + 1;                                   
     	A = A - BCost;                          
@@ -71,9 +71,9 @@ var get_b = function(number){
 };
 
 var C = 0;
-
+var CCost = Math.floor(10 * Math.pow(1.1,B));
 var buyC = function(){
-    var CCost = Math.floor(10 * Math.pow(1.1,B));     
+         
     if(B >= CCost){                                   
         C = C + 1;                                  
     	C = C - CCost;                          
@@ -87,9 +87,9 @@ var get_c = function(number){
 }
 
 var D = 0;
-
+var DCost = Math.floor(10 * Math.pow(1.1,)); 
 var buyD = function(){
-    var DCost = Math.floor(10 * Math.pow(1.1,));     
+        
     if(C >= DCost){                                   
         D = D + 1;                                   
     	C = C - DCost;                          
@@ -105,9 +105,9 @@ var get_d = function(number){
 }
 
 var E = 0;
-
+ var ECost = Math.floor(5000 * Math.pow(1.1,D));  
 var buyE = function(){
-    var ECost = Math.floor(5000 * Math.pow(1.1,D));     
+      
     if(D >= ECost){                                   
         E = E + 1;                                  
     	D = D - ECost;                          
@@ -120,8 +120,9 @@ var buyE = function(){
 
 
 ones = 0;
+ var oneCost = Math.floor(10 * Math.pow(1.1,B)); 
 var buyOne = function(){
-    var oneCost = Math.floor(10 * Math.pow(1.1,B));     
+   
     if(B >= oneCost){                                   
         ones = ones + 1;                                   
 	    B = B - oneCost
@@ -133,8 +134,9 @@ var buyOne = function(){
 };
 
 twos = 0;
+var twoCost = Math.floor(10 * Math.pow(1.1,C));
 var buyTwo = function(){
-    var twoCost = Math.floor(10 * Math.pow(1.1,C));     
+         
     if(C >= twoCost){                                   
         twos = twos + 1;                                 
     	C = C - twoCost;                         
@@ -145,8 +147,9 @@ var buyTwo = function(){
     document.getElementById('twoCost').innerHTML = nextCost;  
 
 threes = 0;
+var threeCost = Math.floor(10 * Math.pow(1.1,D));
 var buyThree = function(){
-    var threeCost = Math.floor(10 * Math.pow(1.1,D));     
+         
     if(D >= threeCost){                                   
         threes = threes + 1;                                   
     	D = D - threeCost;                          
@@ -157,8 +160,9 @@ var buyThree = function(){
     document.getElementById('threeCost').innerHTML = nextCost;  
 
 fours = 0;
+var fourCost = Math.floor(10 * Math.pow(1.1,E));
 var buyFour = function(){
-    var fourCost = Math.floor(10 * Math.pow(1.1,E));     
+         
     if(E >= fourCost){                                  
         fours = fours + 1;                                   
     	E = E - fourCost;                         
