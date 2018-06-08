@@ -1,7 +1,7 @@
 var a = 0;
 var wA = " A"
 var b = 0;
-var wA = " B"
+var wB = " B"
 var c = 0;
 var wC = " C"
 
