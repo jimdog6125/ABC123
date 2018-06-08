@@ -37,7 +37,7 @@ function buyB(){
         document.getElementById('a').innerHTML = a;  
     };
     var nextCost = Math.floor(10 * Math.pow(1.3,c));       
-    document.getElementById('bCost').innerHTML = nextCost;  
+    document.getElementById('bCost').innerHTML = nextCost + " A";  
 };
 
 function buyC(){
@@ -49,7 +49,7 @@ function buyC(){
         document.getElementById('b').innerHTML = b;  
     };
     var nextCost = Math.floor(10 * Math.pow(1.3,c));       
-    document.getElementById('cCost').innerHTML = nextCost;  
+    document.getElementById('cCost').innerHTML = nextCost + " B";  
 };
 
 
