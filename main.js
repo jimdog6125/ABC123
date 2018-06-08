@@ -1,5 +1,7 @@
 var a = 0;
+var wA = " A"
 var b = 0;
+var wA = " B"
 var c = 0;
 var save = {
     a: a,
@@ -37,7 +39,7 @@ function buyB(){
         document.getElementById('a').innerHTML = a;  
     };
     var nextCost = Math.floor(10 * Math.pow(1.3,c));       
-    document.getElementById('bCost').innerHTML = nextCost;  
+    document.getElementById('bCost').innerHTML = nextCost + wA;  
 };
 
 function buyC(){
@@ -49,7 +51,7 @@ function buyC(){
         document.getElementById('b').innerHTML = b;  
     };
     var nextCost = Math.floor(10 * Math.pow(1.3,c));       
-    document.getElementById('cCost').innerHTML = nextCost;  
+    document.getElementById('cCost').innerHTML = nextCost + wB;  
 };
 
 
