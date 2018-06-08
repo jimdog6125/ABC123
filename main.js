@@ -1,21 +1,44 @@
 var a = 0;
+var b = 0;
+var save = {
+    a: a,
+    b: b,
+}
+
+function save(){
+  localStorage.setItem("save",JSON.stringify(save));  
+};
+
+function load(){
+var savegame = JSON.parse(localStorage.getItem("save"));
+if (typeof savegame.a !== "undefined") cookies = savegame.a;
+    document.getElementById("a").innerHTML = a;
+if (typeof savegame.b !== "undefined") cookies = savegame.b;
+    document.getElementById("b").innerHTML = b;
+}
+load;
 
 function A(number){
     a = a + number;
     document.getElementById("a").innerHTML = a;
 };
 
-var b = 0;
 
 function buyB(){
-    var bCost = Math.floor(10 * Math.pow(1.1,b));     //works out the cost of this cursor
-    if(a >= bCost){                                   //checks that the player can afford the cursor
-        b = b + 1;                                   //increases number of cursors
-    	a = a - bCost;                          //removes the cookies spent
-        document.getElementById('b').innerHTML = b;  //updates the number of cursors for the user
-        document.getElementById('a').innerHTML = a;  //updates the number of cookies for the user
+    var bCost = Math.floor(10 * Math.pow(1.1,b));     
+    if(a >= bCost){                                  
+        b = b + 1;                                   
+    	a = a - bCost;                         
+        document.getElementById('b').innerHTML = b;  
+        document.getElementById('a').innerHTML = a;  
     };
-    var nextCost = Math.floor(10 * Math.pow(1.1,b));       //works out the cost of the next cursor
-    document.getElementById('bCost').innerHTML = nextCost;  //updates the cursor cost for the user
+    var nextCost = Math.floor(10 * Math.pow(1.1,b));       
+    document.getElementById('bCost').innerHTML = nextCost;  
 };
 
+
+window.setInterval(function(){
+	
+	save;
+	
+}, 10000);
