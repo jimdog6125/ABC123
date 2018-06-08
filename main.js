@@ -3,6 +3,8 @@ var wA = " A"
 var b = 0;
 var wA = " B"
 var c = 0;
+var wC = " C"
+
 var save = {
     a: a,
     b: b,
@@ -15,14 +17,14 @@ function save(){
 
 function load(){
 var savegame = JSON.parse(localStorage.getItem("save"));
-if (typeof savegame.a !== "undefined") cookies = savegame.a;
+if (typeof savegame.a !== "undefined") a = savegame.a;
     document.getElementById("a").innerHTML = a;
-if (typeof savegame.b !== "undefined") cookies = savegame.b;
+if (typeof savegame.b !== "undefined") b = savegame.b;
     document.getElementById("b").innerHTML = b;
-if (typeof savegame.c !== "undefined") cookies = savegame.c;
+if (typeof savegame.c !== "undefined") c = savegame.c;
     document.getElementById("c").innerHTML = c;
 }
-load;
+
 
 function A(number){
     a = a + number;
