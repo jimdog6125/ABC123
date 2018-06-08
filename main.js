@@ -29,7 +29,7 @@ function A(number){
 
 
 function buyB(){
-    var bCost = Math.floor(10 * Math.pow(1.1,b));     
+    var bCost = Math.floor(10 * Math.pow(1.3,b));     
     if(a >= bCost){                                  
         b = b + 1;                                   
     	a = a - bCost;                         
@@ -41,7 +41,7 @@ function buyB(){
 };
 
 function buyC(){
-    var cCost = Math.floor(10 * Math.pow(1.1,c));     
+    var cCost = Math.floor(10 * Math.pow(1.3,c));     
     if(b >= cCost){                                  
         c = c + 1;                                   
     	b = b - cCost;                         
