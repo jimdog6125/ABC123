@@ -40,7 +40,7 @@ function buyB(){
         document.getElementById('b').innerHTML = b;  
         document.getElementById('a').innerHTML = a;  
     };
-    var nextCost = Math.floor(10 * Math.pow(1.3,c));       
+    var nextCost = Math.floor(10 * Math.pow(1.3,b));       
     document.getElementById('bCost').innerHTML = nextCost + wA;  
 };
 
