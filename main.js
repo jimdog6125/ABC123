@@ -44,38 +44,38 @@ function A(number){
 
 
 function buyB(){
-    var bCost = Math.floor(10 * Math.pow(1.5,b));     
+    var bCost = Math.floor(10 * Math.pow(1.3,b));     
     if(a >= bCost){                                  
         b = b + 1;                                   
     	a = a - bCost;                         
         document.getElementById('b').innerHTML = b;  
         document.getElementById('a').innerHTML = a;  
     };
-    var nextCost = Math.floor(10 * Math.pow(1.5,b));    
+    var nextCost = Math.floor(10 * Math.pow(1.3,b));    
     document.getElementById('bCost').innerHTML = nextCost + wA;  
 };
 
 function buyC(){
-    var cCost = Math.floor(10 * Math.pow(1.5,c));   
+    var cCost = Math.floor(10 * Math.pow(1.3,c));   
     if(b >= cCost){                                  
         c = c + 1;                                   
     	b = b - cCost;                         
         document.getElementById('c').innerHTML = c;  
         document.getElementById('b').innerHTML = b;  
     };
-    var nextCost = Math.floor(10 * Math.pow(1.5,c));      
+    var nextCost = Math.floor(10 * Math.pow(1.3,c));      
     document.getElementById('cCost').innerHTML = nextCost + wB;  
 };
 
 function buyD(){
-    var dCost = Math.floor(10 * Math.pow(1.5,d));   
+    var dCost = Math.floor(10 * Math.pow(1.3,d));   
     if(c >= dCost){                                  
         d = d + 1;                                   
     	c = c - dCost;                         
         document.getElementById('d').innerHTML = d;  
         document.getElementById('c').innerHTML = c;  
     };
-    var nextCost = Math.floor(10 * Math.pow(1.5,d));      
+    var nextCost = Math.floor(10 * Math.pow(1.3,d));      
     document.getElementById('dCost').innerHTML = nextCost + wD;  
 };
 
