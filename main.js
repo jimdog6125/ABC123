@@ -33,26 +33,26 @@ function A(number){
 
 
 function buyB(){
-    var bCost = Math.floor(10 * Math.pow(1.3,b));     
+    var bCost = Math.floor(10 * Math.pow(1.5,b));     
     if(a >= bCost){                                  
         b = b + 1;                                   
     	a = a - bCost;                         
         document.getElementById('b').innerHTML = b;  
         document.getElementById('a').innerHTML = a;  
     };
-    var nextCost = Math.floor(10 * Math.pow(1.3,b));       
+    var nextCost = Math.floor(10 * Math.pow(1.5,b));    
     document.getElementById('bCost').innerHTML = nextCost + wA;  
 };
 
 function buyC(){
-    var cCost = Math.floor(10 * Math.pow(1.3,c));     
+    var cCost = Math.floor(10 * Math.pow(1.5,b));   
     if(b >= cCost){                                  
         c = c + 1;                                   
     	b = b - cCost;                         
         document.getElementById('c').innerHTML = c;  
         document.getElementById('b').innerHTML = b;  
     };
-    var nextCost = Math.floor(10 * Math.pow(1.3,c));       
+    var nextCost = Math.floor(10 * Math.pow(1.5,c));      
     document.getElementById('cCost').innerHTML = nextCost + wB;  
 };
 
