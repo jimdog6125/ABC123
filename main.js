@@ -79,6 +79,18 @@ function buyD(){
     document.getElementById('dCost').innerHTML = nextCost + wD;  
 };
 
+function buy1(){
+    var oneCost = Math.floor(10 * Math.pow(1.3,1));   
+    if(c >= dCost){                                  
+        d = d + 1;                                   
+    	c = c - dCost;                         
+        document.getElementById('d').innerHTML = d;  
+        document.getElementById('c').innerHTML = c;  
+    };
+    var nextCost = Math.floor(10 * Math.pow(1.3,d));      
+    document.getElementById('dCost').innerHTML = nextCost + wD;  
+};
+
 
 
 window.setInterval(function(){
