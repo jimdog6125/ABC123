@@ -8,6 +8,8 @@ var d = 0;
 var wD = " D";
 var e = 0;
 var wE = " E";
+var one = 0;
+var w1 = " 1"
 
 var save = {
     a: a,
@@ -15,6 +17,7 @@ var save = {
     c: c,
     d: d,
     e: e,
+    one: one,
     
 }
 
@@ -34,6 +37,8 @@ if (typeof savegame.d !== "undefined") d = savegame.d;
     document.getElementById("d").innerHTML = d;
 if (typeof savegame.e !== "undefined") e = savegame.e;
     document.getElementById("e").innerHTML = e;
+if (typeof savegame.one !== "undefined") one = savegame.one;
+    document.getElementById("ones").innerHTML = one;
 }
 
 
@@ -80,15 +85,15 @@ function buyD(){
 };
 
 function buy1(){
-    var oneCost = Math.floor(10 * Math.pow(1.3,1));   
-    if(c >= dCost){                                  
-        d = d + 1;                                   
-    	c = c - dCost;                         
-        document.getElementById('d').innerHTML = d;  
-        document.getElementById('c').innerHTML = c;  
+    var oneCost = Math.floor(10 * Math.pow(1.3,one));   
+    if(b >= oneCost){                                  
+        one = one + 1;                                   
+    	b = b - oneCost;                         
+        document.getElementById('ones').innerHTML = one;  
+        document.getElementById('b').innerHTML = b;  
     };
-    var nextCost = Math.floor(10 * Math.pow(1.3,d));      
-    document.getElementById('dCost').innerHTML = nextCost + wD;  
+    var nextCost = Math.floor(10 * Math.pow(1.3,one));      
+    document.getElementById('oneCost').innerHTML = nextCost + wB;  
 };
 
 
